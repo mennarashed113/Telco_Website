@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(npx create-react-app .)",
+      "Bash(npm install)",
+      "Bash(dir)",
+      "Bash(dir:*)",
+      "Bash(npm start)",
+      "Bash(del index.html)",
+      "Bash(del styles.css)",
+      "Bash(del script.js)",
+      "Bash(timeout /t 3)",
+      "Bash(copy \"c:\\Users\\menna.rashed\\Downloads\\TELCO-CP - 2023-4_250203_134527.pdf\" \"d:\\Telco\\public\\TELCO-Company-Profile.pdf\")",
+      "Bash(git init:*)",
+      "Bash(git config:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

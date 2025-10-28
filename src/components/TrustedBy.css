@@ -1,0 +1,128 @@
+.trusted-by {
+  padding: 6rem 0;
+  background: #ffffff;
+}
+
+.trusted-by h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+
+.industry-card {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  transition: transform 0.3s;
+}
+
+.industry-card:hover {
+  transform: translateY(-5px);
+}
+
+.industry-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 1.8rem;
+}
+
+.industry-icon.blue {
+  background: linear-gradient(135deg, #0066cc 0%, #4da6ff 100%);
+  color: #ffffff;
+}
+
+.industry-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.industry-card p {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.trust-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 3rem;
+  background: linear-gradient(135deg, #0066cc 0%, #4da6ff 100%);
+  border-radius: 20px;
+  margin-top: 2rem;
+}
+
+.metric-item {
+  text-align: center;
+  padding: 1rem;
+}
+
+.metric-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.metric-label {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .industries-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .trust-metrics {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .trusted-by {
+    padding: 4rem 0;
+  }
+
+  .trusted-by h2 {
+    font-size: 2rem;
+  }
+
+  .industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .trust-metrics {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .metric-number {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .industries-grid {
+    grid-template-columns: 1fr;
+  }
+}
