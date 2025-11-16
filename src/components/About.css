@@ -56,7 +56,7 @@
 /* Image with enhancements */
 .about-image {
   position: relative;
-  margin-top: 40px;
+  margin-bottom: 2rem;
 }
 
 .image-wrapper {
@@ -249,6 +249,418 @@
   transform: translateY(-1px);
 }
 
+/* Right Column Container */
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* Company Resources Section */
+.company-resources {
+  position: relative;
+  background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 10px 40px rgba(0, 102, 204, 0.08);
+  border: 1px solid rgba(0, 102, 204, 0.1);
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.company-resources::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, #0066cc, #4da6ff);
+  border-radius: 20px 0 0 20px;
+}
+
+.company-resources:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0, 102, 204, 0.15);
+}
+
+.resources-header {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.resources-header h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #0066cc, #4da6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  display: inline-block;
+}
+
+.resources-header h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(135deg, #0066cc, #4da6ff);
+  border-radius: 2px;
+}
+
+.resources-content {
+  position: relative;
+}
+
+.resources-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.resources-content p::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, #0066cc, #4da6ff);
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.resources-intro {
+  font-weight: 600;
+  color: #2a2a2a !important;
+  font-size: 1.15rem !important;
+}
+
+.resources-intro::before {
+  width: 10px !important;
+  height: 10px !important;
+  opacity: 1 !important;
+  top: 10px !important;
+}
+
+.resources-commitment {
+  font-style: italic;
+  color: #0066cc !important;
+  font-weight: 500;
+  background: linear-gradient(135deg, rgba(0, 102, 204, 0.05), rgba(77, 166, 255, 0.05));
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #0066cc;
+  padding-left: 2rem !important;
+  margin-top: 2rem;
+}
+
+.resources-commitment::before {
+  background: #0066cc !important;
+  width: 12px !important;
+  height: 12px !important;
+  left: 1rem !important;
+}
+
+.resources-decoration {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.resources-decoration::before {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, #0066cc 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+/* Company Philosophy Section */
+.company-philosophy {
+  position: relative;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 10px 40px rgba(77, 166, 255, 0.08);
+  border: 1px solid rgba(77, 166, 255, 0.1);
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.company-philosophy::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, #4da6ff, #0066cc);
+  border-radius: 0 20px 20px 0;
+}
+
+.company-philosophy:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(77, 166, 255, 0.15);
+}
+
+.philosophy-header {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.philosophy-header h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #4da6ff, #0066cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  display: inline-block;
+}
+
+.philosophy-header h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(135deg, #4da6ff, #0066cc);
+  border-radius: 2px;
+}
+
+.philosophy-content {
+  position: relative;
+}
+
+.philosophy-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.philosophy-content p::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, #4da6ff, #0066cc);
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.philosophy-intro {
+  font-weight: 600;
+  color: #2a2a2a !important;
+  font-size: 1.15rem !important;
+}
+
+.philosophy-intro::before {
+  width: 10px !important;
+  height: 10px !important;
+  opacity: 1 !important;
+  top: 10px !important;
+}
+
+.philosophy-commitment {
+  font-style: italic;
+  color: #4da6ff !important;
+  font-weight: 500;
+  background: linear-gradient(135deg, rgba(77, 166, 255, 0.05), rgba(0, 102, 204, 0.05));
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #4da6ff;
+  padding-left: 2rem !important;
+  margin-top: 2rem;
+}
+
+.philosophy-commitment::before {
+  background: #4da6ff !important;
+  width: 12px !important;
+  height: 12px !important;
+  left: 1rem !important;
+}
+
+.philosophy-decoration {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.philosophy-decoration::before {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, #4da6ff 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+/* Method Statement Section */
+.method-statement {
+  position: relative;
+  background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 10px 40px rgba(0, 102, 204, 0.08);
+  border: 1px solid rgba(0, 102, 204, 0.1);
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.method-statement::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, #0066cc, #4da6ff);
+  border-radius: 20px 0 0 20px;
+}
+
+.method-statement:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0, 102, 204, 0.15);
+}
+
+.method-header {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.method-header h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #0066cc, #4da6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  display: inline-block;
+}
+
+.method-header h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(135deg, #0066cc, #4da6ff);
+  border-radius: 2px;
+}
+
+.method-content {
+  position: relative;
+}
+
+.method-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.method-content p::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, #0066cc, #4da6ff);
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.method-intro {
+  font-weight: 600;
+  color: #2a2a2a !important;
+  font-size: 1.15rem !important;
+}
+
+.method-intro::before {
+  width: 10px !important;
+  height: 10px !important;
+  opacity: 1 !important;
+  top: 10px !important;
+}
+
+.method-commitment {
+  font-style: italic;
+  color: #0066cc !important;
+  font-weight: 500;
+  background: linear-gradient(135deg, rgba(0, 102, 204, 0.05), rgba(77, 166, 255, 0.05));
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #0066cc;
+  padding-left: 2rem !important;
+  margin-top: 2rem;
+}
+
+.method-commitment::before {
+  background: #0066cc !important;
+  width: 12px !important;
+  height: 12px !important;
+  left: 1rem !important;
+}
+
+.method-decoration {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.method-decoration::before {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, #0066cc 0%, transparent 70%);
+  border-radius: 50%;
+}
+
 /* Responsive design */
 @media (max-width: 1024px) {
   .about {
@@ -275,6 +687,46 @@
   .bg-shape.shape-2 {
     width: 250px;
     height: 250px;
+  }
+
+  .right-column {
+    gap: 2rem;
+  }
+
+  .company-resources {
+    padding: 2.5rem;
+  }
+
+  .resources-header h3 {
+    font-size: 1.8rem;
+  }
+
+  .resources-content p {
+    font-size: 1rem;
+  }
+
+  .company-philosophy {
+    padding: 2.5rem;
+  }
+
+  .philosophy-header h3 {
+    font-size: 1.8rem;
+  }
+
+  .philosophy-content p {
+    font-size: 1rem;
+  }
+
+  .method-statement {
+    padding: 2.5rem;
+  }
+
+  .method-header h3 {
+    font-size: 1.8rem;
+  }
+
+  .method-content p {
+    font-size: 1rem;
   }
 }
 
@@ -339,6 +791,79 @@
   .decoration-2 {
     width: 80px;
     height: 80px;
+  }
+
+  .right-column {
+    gap: 1.5rem;
+  }
+
+  .company-resources {
+    padding: 2rem;
+  }
+
+  .resources-header h3 {
+    font-size: 1.6rem;
+  }
+
+  .resources-content p {
+    font-size: 0.95rem;
+    padding-left: 1.2rem;
+  }
+
+  .resources-intro {
+    font-size: 1.05rem !important;
+  }
+
+  .resources-commitment {
+    padding: 1.2rem;
+    padding-left: 1.5rem !important;
+    margin-top: 1.5rem;
+  }
+
+  .company-philosophy {
+    padding: 2rem;
+  }
+
+  .philosophy-header h3 {
+    font-size: 1.6rem;
+  }
+
+  .philosophy-content p {
+    font-size: 0.95rem;
+    padding-left: 1.2rem;
+  }
+
+  .philosophy-intro {
+    font-size: 1.05rem !important;
+  }
+
+  .philosophy-commitment {
+    padding: 1.2rem;
+    padding-left: 1.5rem !important;
+    margin-top: 1.5rem;
+  }
+
+  .method-statement {
+    padding: 2rem;
+  }
+
+  .method-header h3 {
+    font-size: 1.6rem;
+  }
+
+  .method-content p {
+    font-size: 0.95rem;
+    padding-left: 1.2rem;
+  }
+
+  .method-intro {
+    font-size: 1.05rem !important;
+  }
+
+  .method-commitment {
+    padding: 1.2rem;
+    padding-left: 1.5rem !important;
+    margin-top: 1.5rem;
   }
 }
 
@@ -419,5 +944,144 @@
   .bg-shape.shape-1,
   .bg-shape.shape-2 {
     display: none;
+  }
+
+  .right-column {
+    gap: 1.2rem;
+  }
+
+  .company-resources {
+    padding: 1.5rem;
+  }
+
+  .resources-header h3 {
+    font-size: 1.4rem;
+  }
+
+  .resources-header h3::after {
+    width: 50px;
+    height: 3px;
+  }
+
+  .resources-content p {
+    font-size: 0.9rem;
+    padding-left: 1rem;
+  }
+
+  .resources-content p::before {
+    width: 6px;
+    height: 6px;
+    top: 10px;
+  }
+
+  .resources-intro {
+    font-size: 1rem !important;
+  }
+
+  .resources-intro::before {
+    width: 8px !important;
+    height: 8px !important;
+  }
+
+  .resources-commitment {
+    padding: 1rem;
+    padding-left: 1.3rem !important;
+    margin-top: 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .resources-commitment::before {
+    width: 10px !important;
+    height: 10px !important;
+  }
+
+  .company-philosophy {
+    padding: 1.5rem;
+  }
+
+  .philosophy-header h3 {
+    font-size: 1.4rem;
+  }
+
+  .philosophy-header h3::after {
+    width: 50px;
+    height: 3px;
+  }
+
+  .philosophy-content p {
+    font-size: 0.9rem;
+    padding-left: 1rem;
+  }
+
+  .philosophy-content p::before {
+    width: 6px;
+    height: 6px;
+    top: 10px;
+  }
+
+  .philosophy-intro {
+    font-size: 1rem !important;
+  }
+
+  .philosophy-intro::before {
+    width: 8px !important;
+    height: 8px !important;
+  }
+
+  .philosophy-commitment {
+    padding: 1rem;
+    padding-left: 1.3rem !important;
+    margin-top: 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .philosophy-commitment::before {
+    width: 10px !important;
+    height: 10px !important;
+  }
+
+  .method-statement {
+    padding: 1.5rem;
+  }
+
+  .method-header h3 {
+    font-size: 1.4rem;
+  }
+
+  .method-header h3::after {
+    width: 50px;
+    height: 3px;
+  }
+
+  .method-content p {
+    font-size: 0.9rem;
+    padding-left: 1rem;
+  }
+
+  .method-content p::before {
+    width: 6px;
+    height: 6px;
+    top: 10px;
+  }
+
+  .method-intro {
+    font-size: 1rem !important;
+  }
+
+  .method-intro::before {
+    width: 8px !important;
+    height: 8px !important;
+  }
+
+  .method-commitment {
+    padding: 1rem;
+    padding-left: 1.3rem !important;
+    margin-top: 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .method-commitment::before {
+    width: 10px !important;
+    height: 10px !important;
   }
 }

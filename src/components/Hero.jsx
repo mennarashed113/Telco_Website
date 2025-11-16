@@ -29,7 +29,7 @@ const Hero = () => {
     const duration = 4000; // 4 seconds
     const targets = {
       clients: 500,
-      years: 15,
+      years: 10,
       uptime: 99.9
     };
 
@@ -106,14 +106,10 @@ const Hero = () => {
           <div className="hero-content">
             <h1>
               <span className="highlight">Leading</span><br />
-              Telecommunications<br />
-              & ICT Solutions in<br />
-              Egypt
+              ELV/ICT and Interactive Hospitality solutions in Egypt<br />
             </h1>
             <p>
-              Providing innovative telecommunications and ICT solutions for businesses,
-              government, and enterprises. Transform your digital infrastructure with
-              cutting-edge technology.
+             TELCO Engineering Company is established in 2014 under name of TELCO “Target Engineering for Low Current Systems” with main purpose of Design, Delivery, Install and integration a solutions of ELV/ICT Systems.
             </p>
 
             {/* Key metrics */}

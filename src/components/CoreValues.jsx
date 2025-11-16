@@ -4,19 +4,19 @@ import './CoreValues.css';
 const CoreValues = () => {
   const values = [
     {
-      icon: 'fa-lightbulb',
-      title: 'Innovation',
-      description: 'Continuously adopting cutting-edge technologies to deliver state-of-the-art solutions that drive business transformation.'
+      image: '/img/consulting.jpg',
+      title: 'Consulting and Design',
+      description: 'Expert consulting services and comprehensive design solutions tailored to meet your specific telecommunications and ICT requirements.'
     },
     {
-      icon: 'fa-award',
-      title: 'Excellence',
-      description: 'Committed to delivering superior quality in every project through best practices and rigorous standards.'
+      image: '/img/deploy.jpg',
+      title: 'Deploy and Test',
+      description: 'Professional deployment services with rigorous testing procedures to ensure optimal performance and reliability.'
     },
     {
-      icon: 'fa-handshake',
-      title: 'Partnership',
-      description: 'Building long-term relationships with clients based on trust, transparency, and mutual success.'
+      image: '/img/training.jpg',
+      title: 'Technical Training',
+      description: 'Comprehensive training programs to empower your team with the knowledge and skills needed to maximize system efficiency.'
     }
   ];
 
@@ -30,8 +30,8 @@ const CoreValues = () => {
         <div className="values-grid">
           {values.map((value, index) => (
             <div key={index} className="value-card">
-              <div className="icon-wrapper blue">
-                <i className={`fas ${value.icon}`}></i>
+              <div className="image-wrapper">
+                <img src={value.image} alt={value.title} />
               </div>
               <h3>{value.title}</h3>
               <p>{value.description}</p>
