@@ -3,10 +3,10 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import CoreValues from './components/CoreValues';
-import Solutions from './components/Solutions';
+import Services from './components/Services';
 import CTABanner from './components/CTABanner';
-import Partnerships from './components/Partnerships';
-import SuccessStories from './components/SuccessStories';
+import Partners from './components/Partners';
+import Clients from './components/Clients';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './App.css';
@@ -18,10 +18,10 @@ function App() {
       <Hero />
       <About />
       <CoreValues />
-      <Solutions />
+      <Services />
       <CTABanner />
-      <Partnerships />
-      <SuccessStories />
+      <Partners />
+      <Clients />
       <Contact />
       <Footer />
     </div>

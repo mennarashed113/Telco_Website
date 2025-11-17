@@ -14,7 +14,9 @@
       "Bash(copy \"c:\\Users\\menna.rashed\\Downloads\\TELCO-CP - 2023-4_250203_134527.pdf\" \"d:\\Telco\\public\\TELCO-Company-Profile.pdf\")",
       "Bash(git init:*)",
       "Bash(git config:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git mv:*)",
+      "Bash(npm install:*)"
     ],
     "deny": [],
     "ask": []

@@ -38,695 +38,160 @@
   left: 10%;
 }
 
-/* About section specific header adjustments */
 .about .section-header {
   z-index: 1;
+  margin-bottom: 4rem;
 }
 
-/* About Grid */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: start;
-  position: relative;
-  z-index: 1;
-}
-
-/* Image with enhancements */
-.about-image {
-  position: relative;
-  margin-bottom: 2rem;
-}
-
-.image-wrapper {
-  position: relative;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
-  transition: transform 0.4s ease;
-}
-
-.image-wrapper:hover {
-  transform: translateY(-10px);
-}
-
-.about-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.6s ease;
-}
-
-.image-wrapper:hover img {
-  transform: scale(1.1);
-}
-
-.image-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(0, 102, 204, 0.2) 0%, rgba(77, 166, 255, 0.1) 100%);
-  opacity: 0.8;
-  transition: opacity 0.4s;
-  z-index: 1;
-}
-
-.image-wrapper:hover .image-overlay {
-  opacity: 0.3;
-}
-
-/* Decorative frame elements */
-.image-decoration {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border: 3px solid #0066cc;
-  z-index: 2;
-  transition: all 0.4s ease;
-}
-
-.decoration-1 {
-  top: -15px;
-  left: -15px;
-  border-right: none;
-  border-bottom: none;
-  border-radius: 15px 0 0 0;
-}
-
-.decoration-2 {
-  bottom: -15px;
-  right: -15px;
-  border-left: none;
-  border-top: none;
-  border-radius: 0 0 15px 0;
-}
-
-.image-wrapper:hover .decoration-1 {
-  top: -20px;
-  left: -20px;
-}
-
-.image-wrapper:hover .decoration-2 {
-  bottom: -20px;
-  right: -20px;
-}
-
-/* About Content */
+/* Main Content Layout */
 .about-content {
   position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.about-description {
-  font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 2.5rem;
-  line-height: 1.8;
+/* Tabs Container */
+.about-tabs-container {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 102, 204, 0.1);
+  border: 2px solid rgba(0, 102, 204, 0.08);
 }
 
-.about-features {
+/* Tabs Header */
+.tabs-header {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: 2.5rem;
+  background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+  border-bottom: 2px solid rgba(0, 102, 204, 0.1);
 }
 
-.feature {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-  transition: transform 0.3s ease;
-}
-
-.feature:hover {
-  transform: translateX(8px);
-}
-
-.feature-icon {
-  flex-shrink: 0;
-  width: 50px;
-  height: 50px;
+.tab-button {
+  flex: 1;
+  padding: 1.5rem 1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #0066cc, #4da6ff);
-  border-radius: 12px;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 102, 204, 0.2);
-}
-
-.feature:hover .feature-icon {
-  transform: scale(1.1) rotate(5deg);
-  box-shadow: 0 8px 25px rgba(0, 102, 204, 0.35);
-}
-
-.feature-icon i {
-  color: #ffffff;
-  font-size: 1.3rem;
-}
-
-.feature h4 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  color: #1a1a1a;
+  gap: 0.5rem;
+  font-size: 1rem;
   font-weight: 600;
-  transition: color 0.3s;
+  color: #666;
+  position: relative;
 }
 
-.feature:hover h4 {
+.tab-button i {
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  background: rgba(0, 102, 204, 0.05);
   color: #0066cc;
 }
 
-.feature p {
-  color: #666;
-  font-size: 0.95rem;
-  line-height: 1.6;
+.tab-button:hover i {
+  transform: scale(1.1);
 }
 
-/* Call to Action Button */
-.btn-about {
-  background: linear-gradient(135deg, #0066cc, #4da6ff);
-  color: #ffffff;
-  border: none;
-  padding: 1rem 2.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.4s ease;
-  box-shadow: 0 8px 25px rgba(0, 102, 204, 0.3);
+.tab-button.active {
+  color: #0066cc;
+  border-bottom-color: #0066cc;
+  background: #ffffff;
+}
+
+.tab-button.active i {
+  transform: scale(1.15);
+}
+
+/* Tabs Content */
+.tabs-content {
   position: relative;
-  overflow: hidden;
+  min-height: 400px;
 }
 
-.btn-about::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
-  transform: translate(-50%, -50%);
-  transition: width 0.6s, height 0.6s;
+.tab-content {
+  padding: 2.5rem;
+  display: none;
+  animation: fadeIn 0.5s ease;
 }
 
-.btn-about:hover::before {
-  width: 300px;
-  height: 300px;
+.tab-content.active {
+  display: block;
 }
 
-.btn-about:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(0, 102, 204, 0.4);
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.btn-about:active {
-  transform: translateY(-1px);
-}
-
-/* Right Column Container */
-.right-column {
+.tab-content h3 {
+  font-size: 1.8rem;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
   display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
+  align-items: center;
+  gap: 0.75rem;
 }
 
-/* Company Resources Section */
-.company-resources {
-  position: relative;
-  background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
-  border-radius: 20px;
-  padding: 3rem;
-  box-shadow: 0 10px 40px rgba(0, 102, 204, 0.08);
-  border: 1px solid rgba(0, 102, 204, 0.1);
-  transition: all 0.4s ease;
-  overflow: hidden;
-}
-
-.company-resources::before {
+.tab-content h3::before {
   content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 5px;
-  height: 100%;
+  width: 4px;
+  height: 2rem;
   background: linear-gradient(180deg, #0066cc, #4da6ff);
-  border-radius: 20px 0 0 20px;
-}
-
-.company-resources:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 50px rgba(0, 102, 204, 0.15);
-}
-
-.resources-header {
-  margin-bottom: 2rem;
-  position: relative;
-}
-
-.resources-header h3 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 1rem;
-  background: linear-gradient(135deg, #0066cc, #4da6ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  position: relative;
-  display: inline-block;
-}
-
-.resources-header h3::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(135deg, #0066cc, #4da6ff);
   border-radius: 2px;
 }
 
-.resources-content {
-  position: relative;
-}
-
-.resources-content p {
-  font-size: 1.05rem;
+.tab-content p {
+  font-size: 1rem;
+  color: #666;
   line-height: 1.8;
-  color: #4a4a4a;
-  margin-bottom: 1.5rem;
-  position: relative;
-  padding-left: 1.5rem;
+  margin-bottom: 1.2rem;
 }
 
-.resources-content p::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 12px;
-  width: 8px;
-  height: 8px;
-  background: linear-gradient(135deg, #0066cc, #4da6ff);
-  border-radius: 50%;
-  opacity: 0.6;
+.tab-content p:last-child {
+  margin-bottom: 0;
 }
 
-.resources-intro {
+.tab-content .highlight-text {
+  color: #0066cc;
   font-weight: 600;
-  color: #2a2a2a !important;
-  font-size: 1.15rem !important;
-}
-
-.resources-intro::before {
-  width: 10px !important;
-  height: 10px !important;
-  opacity: 1 !important;
-  top: 10px !important;
-}
-
-.resources-commitment {
-  font-style: italic;
-  color: #0066cc !important;
-  font-weight: 500;
-  background: linear-gradient(135deg, rgba(0, 102, 204, 0.05), rgba(77, 166, 255, 0.05));
-  padding: 1.5rem;
-  border-radius: 12px;
+  background: rgba(0, 102, 204, 0.05);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
   border-left: 4px solid #0066cc;
-  padding-left: 2rem !important;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
-.resources-commitment::before {
-  background: #0066cc !important;
-  width: 12px !important;
-  height: 12px !important;
-  left: 1rem !important;
-}
-
-.resources-decoration {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 150px;
-  height: 150px;
-  opacity: 0.05;
-  pointer-events: none;
-}
-
-.resources-decoration::before {
-  content: '';
-  position: absolute;
-  bottom: -30px;
-  right: -30px;
-  width: 150px;
-  height: 150px;
-  background: radial-gradient(circle, #0066cc 0%, transparent 70%);
-  border-radius: 50%;
-}
-
-/* Company Philosophy Section */
-.company-philosophy {
-  position: relative;
-  background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
-  border-radius: 20px;
-  padding: 3rem;
-  box-shadow: 0 10px 40px rgba(77, 166, 255, 0.08);
-  border: 1px solid rgba(77, 166, 255, 0.1);
-  transition: all 0.4s ease;
-  overflow: hidden;
-}
-
-.company-philosophy::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 5px;
-  height: 100%;
-  background: linear-gradient(180deg, #4da6ff, #0066cc);
-  border-radius: 0 20px 20px 0;
-}
-
-.company-philosophy:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 50px rgba(77, 166, 255, 0.15);
-}
-
-.philosophy-header {
-  margin-bottom: 2rem;
-  position: relative;
-}
-
-.philosophy-header h3 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 1rem;
-  background: linear-gradient(135deg, #4da6ff, #0066cc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  position: relative;
-  display: inline-block;
-}
-
-.philosophy-header h3::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(135deg, #4da6ff, #0066cc);
-  border-radius: 2px;
-}
-
-.philosophy-content {
-  position: relative;
-}
-
-.philosophy-content p {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: #4a4a4a;
-  margin-bottom: 1.5rem;
-  position: relative;
-  padding-left: 1.5rem;
-}
-
-.philosophy-content p::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 12px;
-  width: 8px;
-  height: 8px;
-  background: linear-gradient(135deg, #4da6ff, #0066cc);
-  border-radius: 50%;
-  opacity: 0.6;
-}
-
-.philosophy-intro {
-  font-weight: 600;
-  color: #2a2a2a !important;
-  font-size: 1.15rem !important;
-}
-
-.philosophy-intro::before {
-  width: 10px !important;
-  height: 10px !important;
-  opacity: 1 !important;
-  top: 10px !important;
-}
-
-.philosophy-commitment {
-  font-style: italic;
-  color: #4da6ff !important;
-  font-weight: 500;
-  background: linear-gradient(135deg, rgba(77, 166, 255, 0.05), rgba(0, 102, 204, 0.05));
-  padding: 1.5rem;
-  border-radius: 12px;
-  border-left: 4px solid #4da6ff;
-  padding-left: 2rem !important;
-  margin-top: 2rem;
-}
-
-.philosophy-commitment::before {
-  background: #4da6ff !important;
-  width: 12px !important;
-  height: 12px !important;
-  left: 1rem !important;
-}
-
-.philosophy-decoration {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 150px;
-  height: 150px;
-  opacity: 0.05;
-  pointer-events: none;
-}
-
-.philosophy-decoration::before {
-  content: '';
-  position: absolute;
-  bottom: -30px;
-  left: -30px;
-  width: 150px;
-  height: 150px;
-  background: radial-gradient(circle, #4da6ff 0%, transparent 70%);
-  border-radius: 50%;
-}
-
-/* Method Statement Section */
-.method-statement {
-  position: relative;
-  background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
-  border-radius: 20px;
-  padding: 3rem;
-  box-shadow: 0 10px 40px rgba(0, 102, 204, 0.08);
-  border: 1px solid rgba(0, 102, 204, 0.1);
-  transition: all 0.4s ease;
-  overflow: hidden;
-}
-
-.method-statement::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 5px;
-  height: 100%;
-  background: linear-gradient(180deg, #0066cc, #4da6ff);
-  border-radius: 20px 0 0 20px;
-}
-
-.method-statement:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 50px rgba(0, 102, 204, 0.15);
-}
-
-.method-header {
-  margin-bottom: 2rem;
-  position: relative;
-}
-
-.method-header h3 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 1rem;
-  background: linear-gradient(135deg, #0066cc, #4da6ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  position: relative;
-  display: inline-block;
-}
-
-.method-header h3::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(135deg, #0066cc, #4da6ff);
-  border-radius: 2px;
-}
-
-.method-content {
-  position: relative;
-}
-
-.method-content p {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: #4a4a4a;
-  margin-bottom: 1.5rem;
-  position: relative;
-  padding-left: 1.5rem;
-}
-
-.method-content p::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 12px;
-  width: 8px;
-  height: 8px;
-  background: linear-gradient(135deg, #0066cc, #4da6ff);
-  border-radius: 50%;
-  opacity: 0.6;
-}
-
-.method-intro {
-  font-weight: 600;
-  color: #2a2a2a !important;
-  font-size: 1.15rem !important;
-}
-
-.method-intro::before {
-  width: 10px !important;
-  height: 10px !important;
-  opacity: 1 !important;
-  top: 10px !important;
-}
-
-.method-commitment {
-  font-style: italic;
-  color: #0066cc !important;
-  font-weight: 500;
-  background: linear-gradient(135deg, rgba(0, 102, 204, 0.05), rgba(77, 166, 255, 0.05));
-  padding: 1.5rem;
-  border-radius: 12px;
-  border-left: 4px solid #0066cc;
-  padding-left: 2rem !important;
-  margin-top: 2rem;
-}
-
-.method-commitment::before {
-  background: #0066cc !important;
-  width: 12px !important;
-  height: 12px !important;
-  left: 1rem !important;
-}
-
-.method-decoration {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 150px;
-  height: 150px;
-  opacity: 0.05;
-  pointer-events: none;
-}
-
-.method-decoration::before {
-  content: '';
-  position: absolute;
-  bottom: -30px;
-  right: -30px;
-  width: 150px;
-  height: 150px;
-  background: radial-gradient(circle, #0066cc 0%, transparent 70%);
-  border-radius: 50%;
-}
-
-/* Responsive design */
+/* Responsive Design */
 @media (max-width: 1024px) {
   .about {
     padding: 5rem 0;
   }
 
-  .section-header {
-    margin-bottom: 3rem;
+  .tab-button {
+    font-size: 0.95rem;
+    padding: 1.2rem 0.8rem;
   }
 
-  .section-title {
-    font-size: 2.2rem;
+  .tab-button span {
+    display: none;
   }
 
-  .about-grid {
-    gap: 3rem;
-  }
-
-  .bg-shape.shape-1 {
-    width: 300px;
-    height: 300px;
-  }
-
-  .bg-shape.shape-2 {
-    width: 250px;
-    height: 250px;
-  }
-
-  .right-column {
-    gap: 2rem;
-  }
-
-  .company-resources {
-    padding: 2.5rem;
-  }
-
-  .resources-header h3 {
-    font-size: 1.8rem;
-  }
-
-  .resources-content p {
-    font-size: 1rem;
-  }
-
-  .company-philosophy {
-    padding: 2.5rem;
-  }
-
-  .philosophy-header h3 {
-    font-size: 1.8rem;
-  }
-
-  .philosophy-content p {
-    font-size: 1rem;
-  }
-
-  .method-statement {
-    padding: 2.5rem;
-  }
-
-  .method-header h3 {
-    font-size: 1.8rem;
-  }
-
-  .method-content p {
-    font-size: 1rem;
+  .tab-button i {
+    font-size: 1.5rem;
   }
 }
 
@@ -735,135 +200,40 @@
     padding: 4rem 0;
   }
 
-  .section-header {
-    margin-bottom: 2.5rem;
+  .about .section-header {
+    margin-bottom: 3rem;
   }
 
-  .section-subtitle {
-    font-size: 0.85rem;
+  .tabs-header {
+    flex-direction: column;
   }
 
-  .section-subtitle::before,
-  .section-subtitle::after {
-    width: 20px;
+  .tab-button {
+    padding: 1.2rem;
+    justify-content: flex-start;
+    border-bottom: 1px solid rgba(0, 102, 204, 0.1);
+    border-left: 3px solid transparent;
   }
 
-  .section-subtitle::before {
-    right: calc(100% + 10px);
+  .tab-button span {
+    display: inline;
   }
 
-  .section-subtitle::after {
-    left: calc(100% + 10px);
+  .tab-button.active {
+    border-bottom-color: rgba(0, 102, 204, 0.1);
+    border-left-color: #0066cc;
   }
 
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
-  .about-description {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .about-features {
-    margin-bottom: 2rem;
-  }
-
-  .feature h4 {
-    font-size: 1.1rem;
-  }
-
-  .feature p {
-    font-size: 0.9rem;
-  }
-
-  .btn-about {
-    width: 100%;
-    padding: 1rem 2rem;
-  }
-
-  .decoration-1,
-  .decoration-2 {
-    width: 80px;
-    height: 80px;
-  }
-
-  .right-column {
-    gap: 1.5rem;
-  }
-
-  .company-resources {
+  .tab-content {
     padding: 2rem;
   }
 
-  .resources-header h3 {
-    font-size: 1.6rem;
+  .tab-content h3 {
+    font-size: 1.5rem;
   }
 
-  .resources-content p {
+  .tab-content p {
     font-size: 0.95rem;
-    padding-left: 1.2rem;
-  }
-
-  .resources-intro {
-    font-size: 1.05rem !important;
-  }
-
-  .resources-commitment {
-    padding: 1.2rem;
-    padding-left: 1.5rem !important;
-    margin-top: 1.5rem;
-  }
-
-  .company-philosophy {
-    padding: 2rem;
-  }
-
-  .philosophy-header h3 {
-    font-size: 1.6rem;
-  }
-
-  .philosophy-content p {
-    font-size: 0.95rem;
-    padding-left: 1.2rem;
-  }
-
-  .philosophy-intro {
-    font-size: 1.05rem !important;
-  }
-
-  .philosophy-commitment {
-    padding: 1.2rem;
-    padding-left: 1.5rem !important;
-    margin-top: 1.5rem;
-  }
-
-  .method-statement {
-    padding: 2rem;
-  }
-
-  .method-header h3 {
-    font-size: 1.6rem;
-  }
-
-  .method-content p {
-    font-size: 0.95rem;
-    padding-left: 1.2rem;
-  }
-
-  .method-intro {
-    font-size: 1.05rem !important;
-  }
-
-  .method-commitment {
-    padding: 1.2rem;
-    padding-left: 1.5rem !important;
-    margin-top: 1.5rem;
   }
 }
 
@@ -872,216 +242,37 @@
     padding: 3rem 0;
   }
 
-  .section-header {
-    margin-bottom: 2rem;
+  .about .section-header {
+    margin-bottom: 2.5rem;
   }
 
-  .section-subtitle {
-    font-size: 0.8rem;
-    letter-spacing: 1.5px;
+  .tab-button {
+    padding: 1rem;
+    font-size: 0.9rem;
   }
 
-  .section-subtitle::before,
-  .section-subtitle::after {
-    display: none;
+  .tab-button i {
+    font-size: 1.3rem;
   }
 
-  .section-title {
-    font-size: 1.75rem;
+  .tab-content {
+    padding: 1.5rem;
   }
 
-  .about-grid {
-    gap: 2rem;
+  .tab-content h3 {
+    font-size: 1.3rem;
   }
 
-  .about-description {
-    font-size: 0.95rem;
+  .tab-content p {
+    font-size: 0.9rem;
   }
 
-  .about-features {
-    gap: 1.2rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .feature {
-    gap: 0.8rem;
-  }
-
-  .feature-icon {
-    width: 45px;
-    height: 45px;
-  }
-
-  .feature-icon i {
-    font-size: 1.1rem;
-  }
-
-  .feature h4 {
-    font-size: 1rem;
-  }
-
-  .feature p {
-    font-size: 0.875rem;
-  }
-
-  .decoration-1,
-  .decoration-2 {
-    width: 60px;
-    height: 60px;
-    border-width: 2px;
-  }
-
-  .decoration-1 {
-    top: -10px;
-    left: -10px;
-  }
-
-  .decoration-2 {
-    bottom: -10px;
-    right: -10px;
+  .tab-content .highlight-text {
+    padding: 0.8rem 1rem;
   }
 
   .bg-shape.shape-1,
   .bg-shape.shape-2 {
     display: none;
-  }
-
-  .right-column {
-    gap: 1.2rem;
-  }
-
-  .company-resources {
-    padding: 1.5rem;
-  }
-
-  .resources-header h3 {
-    font-size: 1.4rem;
-  }
-
-  .resources-header h3::after {
-    width: 50px;
-    height: 3px;
-  }
-
-  .resources-content p {
-    font-size: 0.9rem;
-    padding-left: 1rem;
-  }
-
-  .resources-content p::before {
-    width: 6px;
-    height: 6px;
-    top: 10px;
-  }
-
-  .resources-intro {
-    font-size: 1rem !important;
-  }
-
-  .resources-intro::before {
-    width: 8px !important;
-    height: 8px !important;
-  }
-
-  .resources-commitment {
-    padding: 1rem;
-    padding-left: 1.3rem !important;
-    margin-top: 1.2rem;
-    font-size: 0.9rem;
-  }
-
-  .resources-commitment::before {
-    width: 10px !important;
-    height: 10px !important;
-  }
-
-  .company-philosophy {
-    padding: 1.5rem;
-  }
-
-  .philosophy-header h3 {
-    font-size: 1.4rem;
-  }
-
-  .philosophy-header h3::after {
-    width: 50px;
-    height: 3px;
-  }
-
-  .philosophy-content p {
-    font-size: 0.9rem;
-    padding-left: 1rem;
-  }
-
-  .philosophy-content p::before {
-    width: 6px;
-    height: 6px;
-    top: 10px;
-  }
-
-  .philosophy-intro {
-    font-size: 1rem !important;
-  }
-
-  .philosophy-intro::before {
-    width: 8px !important;
-    height: 8px !important;
-  }
-
-  .philosophy-commitment {
-    padding: 1rem;
-    padding-left: 1.3rem !important;
-    margin-top: 1.2rem;
-    font-size: 0.9rem;
-  }
-
-  .philosophy-commitment::before {
-    width: 10px !important;
-    height: 10px !important;
-  }
-
-  .method-statement {
-    padding: 1.5rem;
-  }
-
-  .method-header h3 {
-    font-size: 1.4rem;
-  }
-
-  .method-header h3::after {
-    width: 50px;
-    height: 3px;
-  }
-
-  .method-content p {
-    font-size: 0.9rem;
-    padding-left: 1rem;
-  }
-
-  .method-content p::before {
-    width: 6px;
-    height: 6px;
-    top: 10px;
-  }
-
-  .method-intro {
-    font-size: 1rem !important;
-  }
-
-  .method-intro::before {
-    width: 8px !important;
-    height: 8px !important;
-  }
-
-  .method-commitment {
-    padding: 1rem;
-    padding-left: 1.3rem !important;
-    margin-top: 1.2rem;
-    font-size: 0.9rem;
-  }
-
-  .method-commitment::before {
-    width: 10px !important;
-    height: 10px !important;
   }
 }

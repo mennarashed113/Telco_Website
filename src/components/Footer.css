@@ -37,12 +37,27 @@
 
 .footer-col ul li {
   margin-bottom: 0.8rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.footer-col ul li i {
+  color: #4da6ff;
+  margin-top: 0.2rem;
+  min-width: 16px;
+}
+
+.footer-col ul li span {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
 }
 
 .footer-col ul li a {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   transition: color 0.3s;
+  line-height: 1.6;
 }
 
 .footer-col ul li a:hover {

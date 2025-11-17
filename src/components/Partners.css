@@ -1,0 +1,170 @@
+.partners {
+  padding: 6rem 0;
+  background: #f8f9fa;
+}
+
+.partners h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+.partners-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin: 4rem 0;
+}
+
+.partner-logo-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  min-height: 150px;
+}
+
+.partner-logo-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 102, 204, 0.05), transparent);
+  transition: left 0.5s;
+}
+
+.partner-logo-card:hover::before {
+  left: 100%;
+}
+
+.partner-logo-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  border-color: rgba(0, 102, 204, 0.2);
+}
+
+.partner-img {
+  max-width: 100%;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.btn-primary-outline {
+  background: transparent;
+  color: #0066cc;
+  border: 2px solid #0066cc;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 3rem auto 0;
+  transition: all 0.3s;
+}
+
+.btn-primary-outline:hover {
+  background: #0066cc;
+  color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+  .partners {
+    padding: 5rem 0;
+  }
+
+  .partners h2 {
+    font-size: 2.2rem;
+  }
+
+  .partners-logos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .partners {
+    padding: 4rem 0;
+  }
+
+  .partners h2 {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .partners-logos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .partner-logo-card {
+    padding: 1.5rem;
+    min-height: 120px;
+  }
+
+  .partner-img {
+    max-height: 80px;
+  }
+
+  .btn-primary-outline {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .partners {
+    padding: 3rem 0;
+  }
+
+  .partners h2 {
+    font-size: 1.75rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .partners-logos-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .partner-logo-card {
+    padding: 1.2rem;
+    min-height: 100px;
+  }
+
+  .partner-img {
+    max-height: 70px;
+  }
+
+  .btn-primary-outline {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+    width: 100%;
+  }
+}

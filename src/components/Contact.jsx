@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
@@ -10,6 +11,21 @@ const Contact = () => {
     company: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [toast, setToast] = useState(null);
+
+  const showToast = (type, title, message) => {
+    setToast({ type, title, message });
+
+    // Auto-hide toast after 5 seconds
+    setTimeout(() => {
+      hideToast();
+    }, 5000);
+  };
+
+  const hideToast = () => {
+    setToast(null);
+  };
 
   const handleChange = (e) => {
     setFormData({
@@ -20,32 +36,63 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Thank you for your message! We will get back to you shortly.');
-    setFormData({
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      company: '',
-      message: ''
-    });
+    setIsSubmitting(true);
+
+    // Show loading toast
+    showToast('loading', 'Sending...', 'Please wait while we send your message');
+
+    // EmailJS configuration
+    const serviceId = 'service_x13zynp';
+    const templateId = 'template_3irqanh';
+    const publicKey = 'UOK8DUc6F4VBjMKxA';
+
+    // Prepare template parameters matching EmailJS template variables
+    const templateParams = {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      phone: formData.phone,
+      company: formData.company,
+      message: formData.message
+    };
+
+    // Send email using EmailJS
+    emailjs.send(serviceId, templateId, templateParams, publicKey)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        showToast('success', 'Message Sent!', 'Thank you for your message! We will get back to you shortly.');
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          company: '',
+          message: ''
+        });
+        setIsSubmitting(false);
+      })
+      .catch((error) => {
+        console.error('FAILED...', error);
+        showToast('error', 'Error', 'Sorry, there was an error sending your message. Please try again or contact us directly.');
+        setIsSubmitting(false);
+      });
   };
 
   const contactInfo = [
     {
       icon: 'fa-map-marker-alt',
       title: 'Visit Us',
-      content: '123 Technology Park\nSmart Village, Giza\nEgypt'
+      content: '2011 Barakat St. - AL Mearag\nZahraa AL Maadi - Ring Road\nEgypt'
     },
     {
       icon: 'fa-phone',
       title: 'Call Us',
-      content: '+20 2 1234 5678\n+20 100 123 4567'
+      content: '+2 0244 74 891\n+2 0122 365 8985'
     },
     {
       icon: 'fa-envelope',
       title: 'Email Us',
-      content: 'info@telcoegypt.com\nsupport@telcoegypt.com'
+      content: 'info@telco-eg.com\nsupport@telco-eg.com'
     },
     {
       icon: 'fa-clock',
@@ -56,6 +103,22 @@ const Contact = () => {
 
   return (
     <section className="contact" id="contact">
+      {/* Toast Notification */}
+      {toast && (
+        <div className={`toast ${toast.type}`}>
+          <div className="toast-icon">
+            {toast.type === 'success' && <i className="fas fa-check"></i>}
+            {toast.type === 'error' && <i className="fas fa-times"></i>}
+            {toast.type === 'loading' && <i className="fas fa-spinner"></i>}
+          </div>
+          <div className="toast-content">
+            <div className="toast-title">{toast.title}</div>
+            <div className="toast-message">{toast.message}</div>
+          </div>
+          <button className="toast-close" onClick={hideToast}>×</button>
+        </div>
+      )}
+
       <div className="container">
         <div className="section-header">
           <span className="section-subtitle">CONTACT US</span>
@@ -130,7 +193,9 @@ const Contact = () => {
                   required
                 ></textarea>
               </div>
-              <button type="submit" className="btn-primary btn-full">Send Message</button>
+              <button type="submit" className="btn-primary btn-full" disabled={isSubmitting}>
+                {isSubmitting ? 'Sending...' : 'Send Message'}
+              </button>
             </form>
           </div>
 
@@ -147,9 +212,9 @@ const Contact = () => {
               </div>
             ))}
 
-            <div className="map-placeholder">
-              <i className="fas fa-map"></i>
-              <p>View on Map</p>
+            <div className="map-placeholder" onClick={() => window.open('https://maps.app.goo.gl/pTadpArQZn3g4q48A', '_blank')}>
+              <i className="fas fa-map-marked-alt"></i>
+              <p>Interactive Map</p>
             </div>
           </div>
         </div>
