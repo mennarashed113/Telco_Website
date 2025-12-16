@@ -17,10 +17,10 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      <CoreValues />
-      <Services />
-      <CTABanner />
       <Partners />
+      <Services />
+      <CoreValues />
+      <CTABanner />
       <Clients />
       <Contact />
       <Footer />

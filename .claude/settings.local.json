@@ -16,7 +16,10 @@
       "Bash(git config:*)",
       "Bash(git add:*)",
       "Bash(git mv:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(git commit:*)",
+      "Bash(findstr:*)",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []

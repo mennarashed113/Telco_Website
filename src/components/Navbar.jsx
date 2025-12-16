@@ -48,7 +48,7 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container">
         <div className="nav-wrapper">
-          <div className="logo">
+          <div className="logo" onClick={() => scrollToSection('home')} style={{ cursor: 'pointer' }}>
             <img src="/img/Logo.png" alt="Telco Egypt Logo" />
           </div>
           <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
