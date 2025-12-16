@@ -401,6 +401,11 @@
   transform: scale(1.05);
 }
 
+.modal-partner-logo.logo-larger {
+  max-height: 90px;
+  max-width: 200px;
+}
+
 .sub-services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

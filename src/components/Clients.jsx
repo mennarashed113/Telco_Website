@@ -100,7 +100,7 @@ const Clients = () => {
           <div className={`logo-track ${logoIsDragging ? 'dragging' : ''}`}>
             {[...clients, ...clients, ...clients].map((client, index) => (
               <div key={index} className="logo-item">
-                <img src={client.logo} alt={client.name} className="client-logo" />
+                <img src={client.logo} alt={`${client.name} - Telco Egypt Client`} className="client-logo" />
                 <span className="client-name">{client.name}</span>
               </div>
             ))}

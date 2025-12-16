@@ -87,7 +87,7 @@ const Contact = () => {
     {
       icon: 'fa-phone',
       title: 'Call Us',
-      content: '+2 0244 74 891\n+2 0122 365 8985'
+      content: '+20 122 343 5275'
     },
     {
       icon: 'fa-envelope',

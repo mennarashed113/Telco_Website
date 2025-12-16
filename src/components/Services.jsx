@@ -62,11 +62,6 @@ const Services = () => {
             description: 'Scalable public network infrastructure and deployment'
           },
           {
-            icon: 'fa-cogs',
-            title: 'OEM & Components',
-            description: 'Quality OEM parts and network components'
-          },
-          {
             icon: 'fa-tools',
             title: 'Infrastructure Management',
             description: 'Comprehensive infrastructure monitoring and management'
@@ -83,14 +78,14 @@ const Services = () => {
       details: {
         subtitle: 'Professional TV Distribution Solutions',
         description: 'POLYTRON headends – made in Germany – are the perfect devices for building community receiving systems. The compact headends are perfect for fast and trouble-free installation of digital receiving systems.',
-        partnerLogos: ['/img/Polytron.png', '/img/Ankaro.png'],
+        partnerLogos: ['/img/Polytron.png', '/img/Riosat.png', '/img/Ankaro.png'],
         subServices: [
           {
             icon: 'fa-server',
             title: 'Headends',
             description: 'POLYTRON headends for building community receiving systems with modular SPM series'
           },
-          {
+          { 
             icon: 'fa-signal',
             title: 'Modulators',
             description: 'Outstanding modulators for feeding own contents into distribution systems'
@@ -137,7 +132,7 @@ const Services = () => {
       details: {
         subtitle: 'Unified digital engagement for maximum impact',
         description: 'A comprehensive suite of digital engagement technologies, featuring Content Management, Digital Signage, Guest WiFi, interactive services and more. Whatever your need, Telco has the technology to turn every screen into an opportunity to connect, inform and impress.',
-        partnerLogos: ['/img/Tripelplay.png', '/img/otrum.png'],
+        partnerLogos: ['/img/Otrum-to-Hub-Rebrand.jpg','/img/Tripelplay.png', '/img/otrum.png'],
         subServices: [
           {
             icon: 'fa-desktop',
@@ -229,7 +224,12 @@ const Services = () => {
               {selectedService.details.partnerLogos && (
                 <div className="modal-partner-logos">
                   {selectedService.details.partnerLogos.map((logo, index) => (
-                    <img key={index} src={logo} alt="Partner Logo" className="modal-partner-logo" />
+                    <img
+                      key={index}
+                      src={logo}
+                      alt={`${logo.split('/').pop().replace(/\.(png|jpg|jpeg|svg)$/i, '').replace(/-/g, ' ')} - Telco Egypt Partner`}
+                      className={`modal-partner-logo ${logo.includes('Riosat') ? 'logo-larger' : ''}`}
+                    />
                   ))}
                 </div>
               )}

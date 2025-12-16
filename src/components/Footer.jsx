@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-col">
-            <h3>TELCO EGYPT</h3>
+            <h3>TELCO Engineering</h3>
             <p>
               Leading provider of telecommunications and ICT solutions in Egypt,
               delivering innovative technology solutions for modern businesses.
@@ -58,18 +58,20 @@ const Footer = () => {
             <ul>
               <li>
                 <i className="fas fa-map-marker-alt"></i>
-                <span>6 A Rd 283, New Maadi, Cairo, Egypt</span>
+                <span>2011 Barakat St. - AL Mearag<br />Zahraa AL Maadi - Ring Road<br />Egypt</span>
               </li>
               <li>
                 <i className="fas fa-phone"></i>
-                <a href="tel:+201064422277">+20 106 442 2277</a>
+                <span>
+                  <a href="tel:+201223435275">+20 122 343 5275</a>
+                </span>
               </li>
               <li>
                 <i className="fas fa-envelope"></i>
-                <a href="mailto:sales@telco-egypt.net">sales@telco-egypt.net</a>
-              </li>
-              <li>
-                <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Get In Touch</a>
+                <span>
+                  <a href="mailto:info@telco-eg.com">info@telco-eg.com</a><br />
+                  <a href="mailto:support@telco-eg.com">support@telco-eg.com</a>
+                </span>
               </li>
             </ul>
           </div>

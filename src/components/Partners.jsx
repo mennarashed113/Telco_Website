@@ -22,7 +22,7 @@ const Partners = () => {
         <div className="partners-logos-grid">
           {partners.map((partner, index) => (
             <div key={index} className="partner-logo-card">
-              <img src={partner.logo} alt={partner.name} className="partner-img" />
+              <img src={partner.logo} alt={`${partner.name} - Telco Egypt Strategic Partner`} className="partner-img" />
             </div>
           ))}
         </div>
